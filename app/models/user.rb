@@ -21,7 +21,7 @@ class User < ApplicationRecord
 
   def normalize_username_and_email
     puts 'after validation.......'
-    self.username = username.downcase.titleize
+    self.username = username.upcase
     self.email = email.downcase
     puts "#{username}\n#{email}"
   end
